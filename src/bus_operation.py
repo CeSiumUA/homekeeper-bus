@@ -13,6 +13,7 @@ class BusOperationKeywords:
     FRAME = 'frame_num'
     FRAME_TOTAL_COUNT = 'frame_cnt'
     OPERATION_ID = 'op_id'
+    AUDIENCE = 'audience'
 
 class BusStatusType(Enum):
     WRONG_OPERATION_ID = 0
