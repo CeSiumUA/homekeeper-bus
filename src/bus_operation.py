@@ -1,6 +1,7 @@
 from enum import Enum
 
 frame_bytes_count = 4096
+frame_header_length = 100
 
 class BusOperationType(Enum):
     ENQUEUE = 0
@@ -14,6 +15,8 @@ class BusOperationKeywords:
     FRAME_TOTAL_COUNT = 'frame_cnt'
     OPERATION_ID = 'op_id'
     AUDIENCE = 'audience'
+    LIFETIME = 'lifetime'
+    DATA = 'data'
 
 class BusStatusType(Enum):
     WRONG_OPERATION_ID = 0

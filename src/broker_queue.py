@@ -19,3 +19,8 @@ class BrokerQueue:
         self.__ensure_audience_exists(audience=audience)
         stored_message = self.__queue_dict[audience].get(block=True)
         return stored_message['data']
+    
+    def audience_msg_count(self, audience):
+        self.__ensure_audience_exists(audience=audience)
+        queue = self.__queue_dict[audience]
+        return queue.qsize()
